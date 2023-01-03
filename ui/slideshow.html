@@ -4,8 +4,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
+body {
+  font-family: Verdana, sans-serif; 
+  margin:0;
+  height: max-content;
+}
+.mySlides {
+  display: none;
+}
+
+.blur{
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
 img {vertical-align: middle;}
 
 /* Slideshow container */
@@ -46,11 +58,15 @@ img {vertical-align: middle;}
 .text {
   color: #f2f2f2;
   font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
   text-align: center;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#f2f2f2;
 }
 
 /* Number text (1/3 etc) */
@@ -101,24 +117,34 @@ img {vertical-align: middle;}
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="img/pcimg.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
+  <img src="img/cracking_logo.png" style="width:100%" height="550">
+  <div class="text">
+  </div> 
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="img/encryption.jpg" style="width:100%">
+  <div class="blur">
+  <img src="img/pcimg.jpg" style="width:100%" height="550" filter="blur(8px)">
+  </div>
   <div class="text"></div>
-</div>
+  <div class="centered">In this section we will be viewing and understanding a attackers Point of View (POV) and the different reosurces they utilize to attack 
+    and identify victims. We will simulate and create an environment where users can get hands-on-experience when conducting this class
+  </div>
+  </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="img_mountains_wide.jpg" style="width:100%">
+  <img src="img/encryption.jpg" style="width:100%" height="550">
   <div class="text"></div>
-</div>
+  <div class="centered">we will also be understanding the importance of encryption, we will create an environment where the user can learn about the encryption,
+    how it is done and also get hands-on-experience trying out encryption.
+  </div>
+  </div>
+  
 
-<a class="prev" onclick="plusSlides(-1)"> ❮ </a>
-<a class="next" onclick="plusSlides(1)"> ❯ </a>
+<a class="prev" onclick="plusSlides(-1)"> &#8592 </a>
+<a class="next" onclick="plusSlides(1)"> &#8594 </a>
 
 </div>
 <br>

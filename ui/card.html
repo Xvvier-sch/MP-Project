@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+    .html {
+        min-height: 100vh;
+    }
+    body { min-height: 100vh; }
+
+
+    .float-container{
+        border: #000000;
+        padding: 20px;
+    }
+
+    .float-child{
+        float: left;
+        padding: 20px;
+    }
+
+    .cracking_text{
+        position: absolute;
+        width: 443px;
+        height: 155px;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*top: 1239px;*/
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #ffffff;
+    }
+
+    .encrypt{
+        position: absolute;
+        /*width: 341px;*/
+        height: 85px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+    .encrypt_text{
+        position: absolute;
+        width: 443px;
+        height: 155px;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+
+    }
+
+    .password_card{
+    position: relative;
+    width: 595px;
+    height: 596px;
+    /*left: 25%;*/
+    /*top: 857px;*/
+    background: #696565;
+    border-radius: 20px;
+    }
+
+    .encrypt_card{
+    position: relative;
+    width: 595px;
+    height: 596px;
+    /*left: 75%;*/
+    /*top: 857px;*/
+    background: #696565;
+    border-radius: 20px;
+    }
+
+    .centered{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+    }
+
+    .password_cracking{
+    position: absolute;
+    /*width: 341px;*/
+    height: 85px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+    }
+
+    .pc_img{
+
+        box-sizing: border-box;
+
+        position: absolute;
+        width: 595px;
+        height: 257px;
+        /*left: 31px;*/
+        /*top: 857px;*/
+        background-image: url("img/pc_blog.jpg");
+        border: 0.3px solid #000000;
+        border-radius: 20px 20px 0px 0px;
+
+    }
+
+    .et_img{
+
+        box-sizing: border-box;
+
+        position: absolute;
+        width: 595px;
+        height: 257px;
+        /*left: 31px;*/
+        /*top: 857px;*/
+        background-image: url("img/encrypt.jpg");
+        border: 0.3px solid #000000;
+        border-radius: 20px 20px 0px 0px;
+
+    }
+
+    .centered{
+        left:50%;
+    }
+
+</style>
+</head>
+
+<body style="background-color:#EBF1F5; margin: 0;">
+<br><br><br>
+    <div class="centered">
+
+            <div class="float-child">
+                <a href="ui/card.html">
+                <div class="password_card" href="../card.html">
+                    <div class="pc_img" >
+                        <!--<img src="img/pc_blog.jpg">-->
+                    </div>
+                    <div class="password_cracking">Password Cracking</div>
+                    <div class="cracking_text">Password cracking is the process of uncovering unknown or forgotten passwords to a computer or network resources</div>
+                </div>
+                </a>
+            </div>
+
+            <div class="float-child">
+                <div class="encrypt_card">
+                    <div class="et_img" >
+                        <!--<img src="img/encrypt.jpg">-->
+                    </div>
+                    <div class="encrypt">Encryption</div>
+                    <div class="encrypt_text">Encryption key is a random string bit that is created to be unpredictable and unique. Encryption key is used to encrypt, decrypt or carry out both functions.</div>
+                </div>
+
+            </div>
+    </div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,583 @@
+<link rel="stylesheet" type="text/css" href="btm.css" />
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title></title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+    html{
+        height: 100%;
+    }
+
+    /*Top Nav CSS*/
+    body {
+    margin: 0;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    min-height: 100vh;
+    }
+
+    .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top:0;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+
+    }
+
+    .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+
+    .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    }
+
+    .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+    }
+    /*Top Nav End*/
+
+
+    /*Slideshow CSS*/
+    * {box-sizing: border-box}
+    body {
+    /*font-family: Verdana, sans-serif;*/
+    margin:0;
+    height: max-content;
+    }
+    .mySlides {
+    display: none;
+    }
+
+    .blur{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    }
+
+    img {vertical-align: middle;}
+
+    /* Slideshow container */
+    .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Caption text */
+    .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    text-align: center;
+    font-family: Verdana, sans-serif; 
+    }
+
+    .sscenteredtext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+    background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+    }
+    /*Slideshow End*/
+
+
+    /*card CSS*/
+    .html {
+        min-height: 100vh;
+    }
+    body { min-height: 100vh; }
+
+
+    .float-container{
+        border: #000000;
+        padding: 20px;
+    }
+
+    .float-child{
+        float: left;
+        padding: 20px;
+    }
+
+    .cracking_text{
+        position: absolute;
+        width: 443px;
+        height: 155px;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*top: 1239px;*/
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #ffffff;
+    }
+
+    .encrypt{
+        position: absolute;
+        /*width: 341px;*/
+        height: 85px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+    .encrypt_text{
+        position: absolute;
+        width: 443px;
+        height: 155px;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+
+    }
+
+    .password_card{
+    position: relative;
+    width: 595px;
+    height: 596px;
+    left: 15%;
+    /*top: 857px;*/
+    background: #696565;
+    border-radius: 20px;
+    }
+
+    .encrypt_card{
+    position: relative;
+    width: 595px;
+    height: 596px;
+    left: 55%;
+    /*top: 857px;*/
+    background: #696565;
+    border-radius: 20px;
+    }
+
+    /*.centered{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+    }*/
+
+    .password_cracking{
+    position: absolute;
+    /*width: 341px;*/
+    height: 85px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+    }
+
+    .pc_img{
+
+        box-sizing: border-box;
+
+        position: absolute;
+        width: 595px;
+        height: 257px;
+        /*left: 31px;*/
+        /*top: 857px;*/
+        background-image: url("ui/img/pc_blog.jpg");
+        border: 0.3px solid #000000;
+        border-radius: 20px 20px 0px 0px;
+
+    }
+
+    .cardcentered{
+        left: 50%;
+        padding-top: 30px;
+        min-height: fit-content;
+    }
+    /*Card CSS End*/
+
+    /*Bottom Bar CSS*/
+
+    @import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@400;600&display=swap');
+
+    body{
+        margin: 0;
+        height: 165px;
+    }
+
+    footer{
+    margin: 0;
+    background: #494949;
+    padding: 0;
+    }
+
+    .footer-top{
+        padding-top: 50px;
+    }
+
+    .footer-container{
+    max-width: 1440px;
+    height: max-content;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    }
+
+
+    .social-media{
+    margin: 20px 0;
+    }
+
+    .social-media a{
+    color: #fff;
+    margin-right: 25px;
+    font-size: 22px;
+    text-decoration: none;
+    transition: .3s linear;
+    }
+
+    .social-media a:hover{
+    color: #fc5c65;
+    }
+
+    .right-col h1{
+    font-size: 26px;
+    }
+
+    .border{
+    width: 100px;
+    height: 4px;
+    background: #fc5c65;
+    }
+
+
+    .txtb{
+    flex: 1;
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #293043;
+    background: #ddd;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    min-width: 260px;
+    }
+
+    .btn{
+    padding: 18px 40px;
+    font-size: 16px;
+    color: #f1f1f1;
+    background: #fc5c65;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    border-radius: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: opacity .3s linear;
+    }
+
+    .btn:hover{
+    opacity: .7;
+    }
+
+    .page-content{
+    min-height: 100vh;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .center{
+    display: block;
+    left:50%;
+    }
+
+    @media screen and (max-width:960px) {
+    .footer-container{
+        max-width: 350px;
+    }
+    .right-col{
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .left-col{
+        width: 100%;
+        text-align: center;
+        left: 50%;
+    }
+    }
+
+
+    @media screen and (max-width:700px){
+    .btn{
+        margin: 0;
+        width: 100%;
+        margin-top: 20px;
+        }
+    }
+
+    /*Bottom Card*/
+
+</style>
+</head>
+
+<body>
+    
+<!--Navbar Code-->
+
+<div class="topnav">
+    <a href="support.php">Support</a>
+    <a href="pc.php">Password Cracking</a>
+    <a href="encrypt.php">Encryption</a>
+    <a href="main.html">Home</a>
+</div>
+
+<!--Slideshow Code-->
+
+<div class="slideshow-container" style="padding-top: 40px;">
+
+    <div class="mySlides fade">
+      <div class="blur">
+      <img src="ui/img/pcimg.jpg" style="width:100%" height="550" filter="blur(8px)">
+      </div>
+      <div class="text">
+      <div class="sscenteredtext">In this section we will be viewing and understanding a attackers Point of View (POV) and the different reosurces they utilize to attack 
+        and identify victims. We will simulate and create an environment where users can get hands-on-experience when conducting this class
+      </div>
+      </div> 
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="blur">
+      <img src="ui/img/encryption.jpg" style="width:100%" height="550">
+      </div>
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img_mountains_wide.jpg" style="width:100%" height="550">
+      <div class="text"></div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)"> &#8592 </a>
+    <a class="next" onclick="plusSlides(1)"> &#8594 </a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <!--Slideshow Script-->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+<!--Card Code-->
+
+<div class="cardcentered">
+
+    <a href="ui/card.html">
+    <div class="password_card">
+        <div class="pc_img"></div>
+        <div class="password_cracking">Password Cracking</div>
+        <div class="cracking_text">Password cracking is the process of uncovering unknown or forgotten passwords to a computer or network resources</div>
+    </div>
+    </a>
+
+    <a href="../card.html">
+    <div class="encrypt_card">
+        <div class="encrypt">Encryption</div>
+        <div class="encrypt_text">Encryption key is a random string bit that is created to be unpredictable and unique. Encryption key is used to encrypt, decrypt or carry out both functions.</div>
+    </div>
+    </a>
+</div>
+
+<!--Bottom Bar-->
+
+<div class="footer-top">
+    <footer >
+        <div class="footer-container">
+        <div class="left-col">
+        <div class="center">
+            <img src="./ui/img/tp.png" style="width: 140px; height: 130px; padding-left: 40px; padding-top: 30px;">
+            <p class="slogan-text"; style="color:#fff;"><b>CREATING TOMORROW</b></p>
+        </div>
+        </div>
+    
+            <div class="right-col">
+            <div class="social-media">
+                <a href="https://www.facebook.com/temasekpoly/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/temasekpoly/"><i class="fab fa-instagram"></i></a>
+                <a href="https://sg.linkedin.com/school/temasek-polytechnic/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="rights-text" ; style="color:#fff;">© 2022 Created By <b>IIT AY2022/23 Dec MP Group 30</b>  All Rights Reserved.</p>
+
+            <!-- <h1>Our Newsletter</h1>
+            <div class="border"></div>
+            <p>Enter Your Email to get our news and updates.</p>
+            <form action="" class="newsletter-form">
+                <input type="text" class="txtb" placeholder="Enter Your Email">
+                <input type="submit" class="btn" value="submit">
+            </form> -->
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+
+
+
+</html>
